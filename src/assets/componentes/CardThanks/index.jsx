@@ -45,7 +45,7 @@ const CardThanks = ({dispersar, email}) =>{
         <NewCard onSubmit={handleSubmi}>
             <img src={icone} alt="Ícone de sucesso"/>
             <h1>{textos.success_message.title}</h1>
-            <p>A confirmation email has been sent to {email}. Please open it and click the button inside to confirm your subscription.</p>
+            <p>A confirmation email has been sent to <strong>{email}</strong> . Please open it and click the button inside to confirm your subscription.</p>
             <Button text= "Dismiss message"  />
         </NewCard>
     )
