@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { styled } from 'styled-components';
+import Button from '../Button';
 
 
 const ContainerEmail = styled.form`
@@ -22,11 +23,16 @@ const ContainerEmail = styled.form`
     
 `
 
-const Email = () => {
+const Email = ({submeter}) => {
     const [email, setEmail] = useState("");
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        submeter();
+    };
+
     return (
-        <ContainerEmail onSubmit={(e) => e.preventDefault()}>
+        <ContainerEmail onSubmit={handleSubmit}>
         
                 <label htmlFor="email">Email address: </label>
                 <input
@@ -35,7 +41,7 @@ const Email = () => {
                     onChange={e => setEmail(e.target.value)}
                     required
                 />
-                <button>Subscribe to monthly newsletter</button>
+                <Button text = "Subscribe to monthly newsletter" />
             
         </ContainerEmail>
     )

@@ -2,6 +2,7 @@ import { styled } from "styled-components"
 import EstilosGlobais from "./assets/componentes/estilosGlobais"
 import Card from "./assets/componentes/Card"
 import CardThanks from "./assets/componentes/CardThanks"
+import { useState } from "react"
 
 const Div = styled.div`
   display: flex;
@@ -12,10 +13,16 @@ const Div = styled.div`
 
 function App() {
 
+  const [showCard, setShowCard] = useState(true)
+
+  const submeter = () =>{
+    setShowCard(!showCard)
+  }
+
   return (
     <Div>
-      <EstilosGlobais/>
-<CardThanks/>
+      <EstilosGlobais />
+      {showCard ? <Card submeter={submeter} /> : <CardThanks/>}
     </Div>
   )
 }

@@ -18,10 +18,10 @@ const Imagem = styled.img`
     height: 100%;
 `
 
-const Card = () =>{
+const Card = ({submeter}) =>{
     return(
         <Container>
-            <Form/>
+            <Form submeter={submeter}/>
             <Imagem src={imagem}  />
         </Container>
     )
