@@ -1,0 +1,16 @@
+{
+  "sign_up_form": {
+    "title": "Stay updated!",
+    "description": "Join 60,000+ product managers receiving monthly updates on:",
+    "topics": {
+      "topic1": "Product discovery and building what matters",
+      "topic2": "Measuring to ensure updates are a success",
+      "topic3": "And much more!"
+    }
+  },
+  "success_message": {
+    "title": "Thanks for subscribing!",
+    "content": "A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.",
+    "dismiss_button": "Dismiss message"
+  }
+}
