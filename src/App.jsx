@@ -16,13 +16,17 @@ function App() {
   const [showCard, setShowCard] = useState(true)
 
   const submeter = () =>{
+    setShowCard(false)
+  }
+
+  const dispersar = () =>{
     setShowCard(!showCard)
   }
 
   return (
     <Div>
       <EstilosGlobais />
-      {showCard ? <Card submeter={submeter} /> : <CardThanks/>}
+      {showCard ? <Card submeter={submeter} /> : <CardThanks dispersar={dispersar}/>}
     </Div>
   )
 }

@@ -3,7 +3,7 @@ import textos from '../textos.json'
 import icone from '../../../../public/assets/images/icon-success.svg'
 import Button from "../Button"
 
-const NewCard = styled.div `
+const NewCard = styled.form `
     background: hsl(0, 0%, 100%);
     width: 30%;
     height: auto;
@@ -34,13 +34,19 @@ const NewCard = styled.div `
  `
 
 
-const CardThanks = () =>{
+const CardThanks = ({dispersar}) =>{
+
+    const handleSubmi = (e) => {
+        e.preventDefault();
+        dispersar();
+    };
+
     return(
-        <NewCard>
+        <NewCard onSubmit={handleSubmi}>
             <img src={icone} alt="Ícone de sucesso"/>
             <h1>{textos.success_message.title}</h1>
             <p>A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
-            <Button text= "Dismiss message" />
+            <Button text= "Dismiss message"  />
         </NewCard>
     )
 }
