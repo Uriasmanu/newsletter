@@ -6,7 +6,7 @@ import Form from "../Form"
 const Container = styled.div`
     background: hsl(0, 0%, 100%);
     width: 50%;
-    height: auto;
+    height: 70%;
     padding: 1%;
     border-radius: 15px;
     display: flex;
@@ -14,7 +14,8 @@ const Container = styled.div`
     justify-content: space-between;
 `
 const Imagem = styled.img`
-    width: 43%;
+    width: 100%;
+    height: 100%;
 `
 
 const Card = () =>{

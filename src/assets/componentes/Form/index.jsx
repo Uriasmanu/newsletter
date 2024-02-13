@@ -7,6 +7,7 @@ import Email from '../email';
 
 const Infos = styled.div`
     padding: 3%;
+    width: 100%;
 
     ul {
         list-style: none;

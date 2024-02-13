@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import { styled } from 'styled-components';
 
 
-const ContainerEmail = styled.div`
+const ContainerEmail = styled.form`
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -18,23 +19,24 @@ const ContainerEmail = styled.div`
         padding: 10px;
         border: hsl(231, 7%, 60%) solid 1px;
     }
-    button{
-        width: 95%;
-        height: 45px;
-        border-radius: 8px;
-        padding: 10px;
-        background: hsl(234, 29%, 20%);
-        color: #fff;
-        cursor: pointer;
-    }
+    
 `
 
 const Email = () => {
+    const [email, setEmail] = useState("");
+
     return (
-        <ContainerEmail>
-            <label htmlFor="email">Email address: </label>
-            <input type="text" id="email" placeholder='email@company.com' />
-            <button>Subscribe to monthly newsletter</button>
+        <ContainerEmail onSubmit={(e) => e.preventDefault()}>
+        
+                <label htmlFor="email">Email address: </label>
+                <input
+                    type="text" id="email" placeholder='email@company.com'
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    required
+                />
+                <button>Subscribe to monthly newsletter</button>
+            
         </ContainerEmail>
     )
 }
