@@ -18,10 +18,10 @@ const Imagem = styled.img`
     height: 100%;
 `
 
-const Card = ({submeter}) =>{
+const Card = ({submeter, setEmailValue}) =>{
     return(
         <Container>
-            <Form submeter={submeter}/>
+            <Form submeter={submeter}  setEmailValue={setEmailValue}/>
             <Imagem src={imagem}  />
         </Container>
     )

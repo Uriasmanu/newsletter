@@ -14,6 +14,7 @@ const Div = styled.div`
 function App() {
 
   const [showCard, setShowCard] = useState(true)
+  const [email, setEmail] = useState("");
 
   const submeter = () =>{
     setShowCard(false)
@@ -26,7 +27,7 @@ function App() {
   return (
     <Div>
       <EstilosGlobais />
-      {showCard ? <Card submeter={submeter} /> : <CardThanks dispersar={dispersar}/>}
+      {showCard ? <Card submeter={submeter} setEmailValue={setEmail} /> : <CardThanks dispersar={dispersar} email= {email}/>}
     </Div>
   )
 }

@@ -27,7 +27,7 @@ const Div = styled.div`
     align-items: center;
 `;
 
-const Form = ({submeter}) => {
+const Form = ({submeter, setEmailValue}) => {
     return (
         <Infos>
             <h1>{textos.sign_up_form.title}</h1>
@@ -43,7 +43,7 @@ const Form = ({submeter}) => {
                 ))}
             </ul>
 
-            <Email submeter={submeter}/>
+            <Email submeter={submeter}  setEmailValue={setEmailValue}/>
         </Infos>
     );
 };

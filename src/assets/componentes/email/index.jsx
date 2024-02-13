@@ -23,12 +23,13 @@ const ContainerEmail = styled.form`
     
 `
 
-const Email = ({submeter}) => {
+const Email = ({submeter, setEmailValue}) => {
     const [email, setEmail] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
         submeter();
+        setEmailValue(email)
     };
 
     return (

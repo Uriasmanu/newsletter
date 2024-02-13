@@ -34,7 +34,7 @@ const NewCard = styled.form `
  `
 
 
-const CardThanks = ({dispersar}) =>{
+const CardThanks = ({dispersar, email}) =>{
 
     const handleSubmi = (e) => {
         e.preventDefault();
@@ -45,7 +45,7 @@ const CardThanks = ({dispersar}) =>{
         <NewCard onSubmit={handleSubmi}>
             <img src={icone} alt="Ícone de sucesso"/>
             <h1>{textos.success_message.title}</h1>
-            <p>A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
+            <p>A confirmation email has been sent to {email}. Please open it and click the button inside to confirm your subscription.</p>
             <Button text= "Dismiss message"  />
         </NewCard>
     )
