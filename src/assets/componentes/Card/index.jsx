@@ -1,7 +1,9 @@
 import {styled} from "styled-components"
 
-import imagem from '../../../../public/assets/images/illustration-sign-up-desktop.svg'
+import imagemDesktop from '../../../../public/assets/images/illustration-sign-up-desktop.svg'
 import Form from "../Form"
+
+import imagemMobile from  '../../../../public/assets/images/illustration-sign-up-mobile.svg'
 
 const Container = styled.div`
     background: hsl(0, 0%, 100%);
@@ -22,7 +24,8 @@ const Imagem = styled.img`
 const Card = ({submeter, setEmailValue}) =>{
     return(
         <Container>
-            <Imagem src={imagem}  />
+            <Imagem src={window.innerWidth <= 600 ? imagemMobile : imagemDesktop}
+        alt="Illustration"/>
 
             <Form submeter={submeter}  setEmailValue={setEmailValue}/>
         </Container>
