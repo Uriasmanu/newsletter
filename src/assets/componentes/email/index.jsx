@@ -20,6 +20,14 @@ const ContainerEmail = styled.form`
         padding: 10px;
         border: hsl(231, 7%, 60%) solid 1px;
     }
+
+    @media screen and (max-width: 600px) {
+        width: 98%;
+
+        input{
+            height: 35px;
+        }
+    }
     
 `
 

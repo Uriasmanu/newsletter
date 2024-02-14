@@ -8,7 +8,7 @@ import Email from '../email';
 const Infos = styled.div`
     padding: 3%;
     width: 100%;
-
+    
     ul {
         list-style: none;
         padding: 0%;
@@ -18,6 +18,11 @@ const Infos = styled.div`
 
         width: 24px;
     }
+
+    @media screen and (max-width: 600px) {
+        height: 66vh;
+    }
+
 `;
 
 const Div = styled.div`
@@ -25,6 +30,11 @@ const Div = styled.div`
     gap: 10px;
     margin-bottom: 2%;
     align-items: center;
+
+    @media screen and (max-width: 600px) {
+        margin-bottom: 8%;
+        width: 73%;
+    }
 `;
 
 const Form = ({submeter, setEmailValue}) => {

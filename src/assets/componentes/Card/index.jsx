@@ -1,9 +1,9 @@
-import {styled} from "styled-components"
+import { styled } from "styled-components"
 
 import imagemDesktop from '../../../../public/assets/images/illustration-sign-up-desktop.svg'
 import Form from "../Form"
 
-import imagemMobile from  '../../../../public/assets/images/illustration-sign-up-mobile.svg'
+import imagemMobile from '../../../../public/assets/images/illustration-sign-up-mobile.svg'
 
 const Container = styled.div`
     background: hsl(0, 0%, 100%);
@@ -15,19 +15,40 @@ const Container = styled.div`
     box-sizing: border-box;
     justify-content: space-between;
     flex-direction: row-reverse;
+
+    @media screen and (max-width: 600px) {
+        background: hsl(0, 0%, 100%);
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+
+    }
 `
-const Imagem = styled.img`
+
+
+const ContainerBackgrond = styled.div`
+    background: url(${imagemDesktop}) ;
     width: 100%;
     height: 100%;
+
+    @media screen and (max-width: 600px) {
+        background: url(${imagemMobile});
+        height: 30%;
+        border-radius: 15px;
+
+    }
+
 `
 
-const Card = ({submeter, setEmailValue}) =>{
-    return(
+const Card = ({ submeter, setEmailValue }) => {
+    return (
         <Container>
-            <Imagem src={window.innerWidth <= 600 ? imagemMobile : imagemDesktop}
-        alt="Illustration"/>
+            <ContainerBackgrond />
 
-            <Form submeter={submeter}  setEmailValue={setEmailValue}/>
+            <Form submeter={submeter} setEmailValue={setEmailValue} />
         </Container>
     )
 }

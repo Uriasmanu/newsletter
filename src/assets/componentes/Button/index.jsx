@@ -13,6 +13,11 @@ const Bnt = styled.button`
         background: hsl(4, 100%, 67%);
         border: hsl(4, 100%, 67%);
     }
+
+    @media screen and (max-width: 600px) {
+        width: 95%;
+        height: 57px;
+    }
 `
 
 const Button = ({text}) =>{
