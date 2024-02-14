@@ -30,7 +30,12 @@ const NewCard = styled.form `
         margin: 0;
     }
     
-
+    @media screen and (max-width: 600px) {
+        width: 100%;
+        height: 100vh;
+        border-radius: 1px;
+        justify-content: center;
+    }
  `
 
 

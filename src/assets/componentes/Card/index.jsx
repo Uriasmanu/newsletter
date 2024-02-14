@@ -24,6 +24,7 @@ const Container = styled.div`
         display: flex;
         box-sizing: border-box;
         flex-direction: column;
+        border-radius: 1px;
 
     }
 `
