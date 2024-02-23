@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { styled } from 'styled-components';
 import textos from '../textos.json';
 
 import icon from '../../../../public/assets/images/icon-success.svg';
 import Email from '../email';
+import { ShowCardProvider } from '../../context';
 
 const Infos = styled.div`
     padding: 3%;
@@ -37,7 +38,10 @@ const Div = styled.div`
     }
 `;
 
-const Form = ({submeter, setEmailValue}) => {
+const Form = ({setEmailValue}) => {
+
+    
+
     return (
         <Infos>
             <h1>{textos.sign_up_form.title}</h1>
@@ -53,7 +57,7 @@ const Form = ({submeter, setEmailValue}) => {
                 ))}
             </ul>
 
-            <Email submeter={submeter}  setEmailValue={setEmailValue}/>
+            <Email  setEmailValue={setEmailValue}/>
         </Infos>
     );
 };

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { styled } from 'styled-components';
 import Button from '../Button';
+import { ShowCardProvider } from '../../context';
+import { useFunction } from '../../../hooks/useFunction';
 
 
 const ContainerEmail = styled.form`
@@ -31,13 +33,15 @@ const ContainerEmail = styled.form`
     
 `
 
-const Email = ({submeter, setEmailValue}) => {
+const Email = ({ setEmailValue}) => {
     const [email, setEmail] = useState("");
+
+    const {submeter} = useFunction();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        submeter();
         setEmailValue(email)
+        submeter()
     };
 
     return (

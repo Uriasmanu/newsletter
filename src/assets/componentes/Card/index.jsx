@@ -44,12 +44,12 @@ const ContainerBackgrond = styled.div`
 
 `
 
-const Card = ({ submeter, setEmailValue }) => {
+const Card = ({ setEmailValue }) => {
     return (
         <Container>
             <ContainerBackgrond />
 
-            <Form submeter={submeter} setEmailValue={setEmailValue} />
+            <Form setEmailValue={setEmailValue} />
         </Container>
     )
 }
